@@ -30,7 +30,7 @@ def get_ranges(lst):
         ranges.append(f"{start}-{end}")
 
     return ', '.join(ranges)
-
+    # Решение верно
 
 # Напсать функцию standardise_phones которая принимает любое
 # количество нестандартизированных телефонных номеров и возвращает
@@ -62,7 +62,7 @@ def standardise_phones(*args):
         if standardized_phone:
             result.append(standardized_phone)
     return result
-
+    # Хорошее решение, есть более универсальное - см ответы
 # Создайте декоратор handle_multiples который позволит функции rope_product
 # вернуть лиш один ответ если задано одно число и много ответов списком если
 # введённых значений будет несколько! И добавьте его к функции rope_product
@@ -77,7 +77,7 @@ def handle_multiples(func):
         else:
             return [func(arg) for arg in args]
     return wrapper
-
+    # Декоратор верный
 # Создайте функцию rope_product, которая берёт позитивный цельный номер,
 # который представляет собой длину верёвки. Длина этой
 # верёвки может быть разделена на любое количество более
@@ -107,3 +107,4 @@ def rope_product(n):
     if n % 3 == 1:
         return 4 * 3**((n-4)//3)
     return 2 * 3**((n-2)//3)
+    # Вск верно
